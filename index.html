@@ -1,0 +1,140 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy Birthday Hunhun 💛</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="outer-bg">
+      <div class="card-container">
+
+        <div class="hearts-top">💙 💛 💙 💛 💙</div>
+
+        <!-- Page 1 -->
+        <section id="page1" class="page active">
+          <div class="card">
+            <h1>Happy Birthday<br><span class="highlight">Hunhun!</span> 🎂</h1>
+            <p>Hey love 💙<br>Are you ready for a surprise?</p>
+            <button id="startBtn">♥ Let's Begin ♥</button>
+          </div>
+        </section>
+
+        <!-- Page 2 -->
+        <section id="page2" class="page hidden">
+          <div class="card">
+            <h2>How old are you turning today?</h2>
+            <input type="text" id="ageInput" placeholder="Enter your age..." />
+            <button id="ageNext">Next</button>
+          </div>
+        </section>
+
+        <!-- Page 3 -->
+        <section id="page3" class="page hidden">
+          <div class="card">
+            <h2>What’s your birthday wish? 🎈</h2>
+            <input type="text" id="wishInput" placeholder="Type your wish..." />
+            <button id="wishNext">Next</button>
+            <div id="hearts"></div>
+          </div>
+        </section>
+
+        <!-- Page 4 -->
+        <section id="page4" class="page hidden">
+          <div class="card">
+            <h2>Pop all the balloons to reveal your surprise 🎉</h2>
+            <div id="balloonArea"></div>
+          </div>
+        </section>
+
+        <!-- Page 5 -->
+        <section id="page5" class="page hidden">
+          <div class="card">
+            <h2>If you count all the photos correctly, then I'll give you a kiss💙</h2>
+            <div class="slideshow">
+              <img id="slideImage" src="images/photo1.jpg" alt="memory">
+            </div>
+          </div>
+        </section>
+
+  <!-- Page 6 -->
+  <section id="page6" class="page hidden">
+    <div class="card final-card">
+      <div id="letterBox">
+        <div id="envelope" class="envelope">💌</div>
+        <p class="tapText">Tap to open your letter 💙</p>
+        <div id="letter" class="letter hidden">
+          <h3>My Dearest Hunhun 💛</h3>
+          <p>
+            Happy Birthday, my love!  
+            Every moment with you feels like a blessing
+            your smile, your warmth, and your heart  
+            make every day more meaningful for me.  
+
+            Thank you for being my reason, my peace, and my forever.  
+            No matter where life takes us, I’ll always be here,  
+            cheering for you, loving you, and choosing you again and again.  
+
+            I’m so proud of you and so grateful to have you.  
+            You are my favorite person in the whole universe.
+            
+            Mahal na mahal kita.❤️
+
+            — Yours Always
+          </p>
+          <button id="doneReadingBtn" class="doneBtn">Done Reading</button>
+        </div>
+
+        <div id="futurePromise" class="hidden future-promise">
+          <p>
+            Maybe one day, we’ll look back at this website and laugh about how corny and cheesy it was (at least 'di jologs).  
+            But today, I just want you to know that you’re my reason to try harder, smile wider, and love deeper.  
+          </p>
+          <div class="endButtons">
+            <button id="replayBtn">Replay Surprise</button>
+            <button id="exitBtn">Exit</button>
+          </div>
+        </div>
+      </div>
+      <div id="floatingHearts"></div>
+    </div>
+  </section>
+
+
+        <div class="hearts-bottom">⭐ 💙 💛 💙 ⭐</div>
+      </div>
+    </div>
+
+    <!-- Background Music -->
+    <audio id="bgMusic" src="music/birthday.mp3" loop></audio>
+
+    
+<!-- Firebase App (core SDK) -->
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+
+<!-- Firestore SDK -->
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+
+<script>
+  // Firebase config
+  const firebaseConfig = {
+    apiKey: "AIzaSyCMJHLrmHnmFuoNThNdeUoKkDeJJKzeWDQ",
+    authDomain: "birthday-surprise-de470.firebaseapp.com",
+    projectId: "birthday-surprise-de470",
+    storageBucket: "birthday-surprise-de470.appspot.com",
+    messagingSenderId: "830225234725",
+    appId: "1:830225234725:web:b04fdbe15f7ba2219538cc",
+    measurementId: "G-DRMHEF9NYF"
+  };
+
+  // Initialize Firebase (v8 style)
+  firebase.initializeApp(firebaseConfig);
+  const db = firebase.firestore();
+</script>
+
+    
+    <script src="script.js"></script>
+
+  </body>
+  </html>
