@@ -50,7 +50,8 @@ document.getElementById('wishNext').addEventListener('click', async () => {
   try {
     await db.collection("wishes").add({
       wish: wish,
-      timestamp: new Date().toISOString()
+      timestampUTC: new Date().toISOString(),
+      timestampPH: new Date().toLocaleString("en-PH", { timeZone: "Asia/Manila" })
     });
     console.log("✅ Wish saved to Firestore:", wish);
   } catch (error) {
@@ -228,4 +229,5 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
 
